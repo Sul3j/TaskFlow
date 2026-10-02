@@ -48,3 +48,24 @@ class Database:
 
         conn.commit()
         conn.close()
+
+class TaskFlowApp:
+
+    def __init__(self, root):
+        self.root = root
+        self.root.title("TaskFlow - Aplikacja do zarządzania zadaniami")
+        self.root.geometry("750x500")
+
+        db = Database()
+
+        style = ttk.Style()
+        style.theme_use("clam")
+
+
+
+if __name__ == "__main__":
+
+    root = tk.Tk()
+
+    app = TaskFlowApp(root)
+    
