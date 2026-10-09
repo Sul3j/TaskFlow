@@ -61,6 +61,22 @@ class TaskFlowApp:
         style = ttk.Style()
         style.theme_use("clam")
 
+        self.create_widgets()
+
+    def create_widgets(self):
+
+        form_frame = ttk.LabelFrame(
+            self.root, text=" Zarządzanie Zadaniami ", padding=15
+        )
+
+        form_frame.pack(
+            fill="x", padx=15, pady=15
+        )
+
+        ttk.Label(form_frame, text="Tytuł zadania:").grid(
+            row=0, column=0, sticky="w", padx=5, pady=5
+        )
+
 
 
 if __name__ == "__main__":
@@ -68,4 +84,6 @@ if __name__ == "__main__":
     root = tk.Tk()
 
     app = TaskFlowApp(root)
+
+    root.mainloop()
     
